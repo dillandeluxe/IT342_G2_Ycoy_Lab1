@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import "./Register.css";
 
 function Register() {
   const [formData, setFormData] = useState({ firstName: "", lastName: "", username: "", email: "", password: "" });
@@ -20,17 +21,19 @@ function Register() {
   };
 
   return (
-    <div style={{ padding: "50px" }}>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <input name="firstName" placeholder="First Name" onChange={handleChange} required /><br /><br />
-        <input name="lastName" placeholder="Last Name" onChange={handleChange} required /><br /><br />
-        <input name="username" placeholder="Username" onChange={handleChange} required /><br /><br />
-        <input name="email" placeholder="Email" type="email" onChange={handleChange} required /><br /><br />
-        <input name="password" placeholder="Password" type="password" onChange={handleChange} required /><br /><br />
-        <button type="submit">Register</button>
-      </form>
-      <p>Already have an account? <Link to="/login">Login here</Link></p>
+    <div className="register-container">
+      <div className="register-card">
+        <h2 className="register-title">Create Account</h2>
+        <form className="register-form" onSubmit={handleSubmit}>
+          <input className="form-input" name="firstName" placeholder="First Name" onChange={handleChange} required />
+          <input className="form-input" name="lastName" placeholder="Last Name" onChange={handleChange} required />
+          <input className="form-input" name="username" placeholder="Username" onChange={handleChange} required />
+          <input className="form-input" name="email" placeholder="Email" type="email" onChange={handleChange} required />
+          <input className="form-input" name="password" placeholder="Password" type="password" onChange={handleChange} required />
+          <button className="register-button" type="submit">Register</button>
+        </form>
+        <p className="register-link">Already have an account? <Link to="/login">Login here</Link></p>
+      </div>
     </div>
   );
 }

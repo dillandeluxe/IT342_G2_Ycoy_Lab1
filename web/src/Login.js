@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import "./Login.css";
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -22,15 +23,17 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div style={{ padding: "50px" }}>
-      <h2>Login</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required /><br /><br />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required /><br /><br />
-        <button type="submit">Login</button>
-      </form>
-      <p>Don't have an account? <Link to="/register">Register here</Link></p>
+    <div className="login-container">
+      <div className="login-card">
+        <h2 className="login-title">Welcome Back</h2>
+        {error && <p className="error-message">{error}</p>}
+        <form className="login-form" onSubmit={handleSubmit}>
+          <input className="form-input" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input className="form-input" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <button className="login-button" type="submit">Login</button>
+        </form>
+        <p className="login-link">Don't have an account? <Link to="/register">Register here</Link></p>
+      </div>
     </div>
   );
 }
