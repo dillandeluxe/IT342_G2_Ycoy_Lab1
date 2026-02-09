@@ -1,4 +1,4 @@
-# TASK CHECKLIST - IT342_G5_Lab1
+# TASK CHECKLIST - IT342_G2_Lab1
 **Lab 1: User Authentication System**
 **Date: February 9, 2026**
 
@@ -106,5 +106,5 @@
 ---
 
 **Last Updated:** February 9, 2026
-**Repository:** IT342_G5_<Lastname>_Lab1
+**Repository:** IT342_G2_Ycoy_Lab1
 **Current Branch:** main (fc8318a)
