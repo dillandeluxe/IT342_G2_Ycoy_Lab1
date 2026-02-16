@@ -20,11 +20,36 @@
   padding: 0 20px;
 }
 
-.dashboard-logo {
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-tab {
   font-size: 24px;
   font-weight: 700;
+  color: #666;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.nav-tab.active {
   color: #333;
-  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.profile-tab {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.profile-tab:hover {
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
 }
 
 .dashboard-content {
