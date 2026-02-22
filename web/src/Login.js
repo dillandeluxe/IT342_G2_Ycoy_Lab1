@@ -14,7 +14,11 @@ function Login({ onLogin }) {
     try {
       const response = await axios.post("http://localhost:8080/api/auth/login", { email, password });
       if (response.status === 200) {
-        onLogin("dummy-token"); 
+        // Grab the real JWT token from the new backend response
+        const token = response.data.token; 
+        
+        // Pass the real token to your app state
+        onLogin(token); 
         navigate("/dashboard");
       }
     } catch (err) {
