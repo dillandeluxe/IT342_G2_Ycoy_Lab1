@@ -9,13 +9,15 @@
 ### 1️⃣ Backend Infrastructure
 - ✅ **Project Setup** - Spring Boot project created with Maven (Commit: e866fef)
 - ✅ **Database Configuration** - MySQL connection configured in application.properties (Commit: 4631cb7)
-- ✅ **Dependencies Added** - JPA, Security, MySQL connector, Lombok (Commit: 4631cb7)
+- ✅ **Dependencies Added** - JPA, Security, MySQL connector, Lombok, JWT (Commit: 4631cb7)
 - ✅ **User Entity** - User.java with proper annotations and fields (Commit: 4631cb7)
 - ✅ **User Repository** - UserRepository.java with findByEmail method (Commit: 4631cb7)
 - ✅ **Security Configuration** - BCrypt password encoder configured (Commit: 4631cb7)
 - ✅ **POST /api/auth/register** - Registration endpoint with email validation (Commit: 4631cb7)
 - ✅ **POST /api/auth/login** - Login endpoint with password verification (Commit: 4631cb7)
 - ✅ **Password Encryption** - BCrypt implementation working (Commit: 4631cb7)
+- ✅ **JWT Token Implementation** - JwtUtil.java with token generation using JJWT 0.12.6 (Commit: TBD)
+- ✅ **Enhanced Login Response** - Login returns JWT token with user info (Commit: fc8318a)
 
 ### 2️⃣ Frontend Infrastructure
 - ✅ **React Project Setup** - ReactJS project with required dependencies (Commit: fc8318a)
@@ -36,7 +38,6 @@
 
 ### 1️⃣ Backend Enhancements
 - 🔄 **GET /api/user/me** - Protected endpoint for user profile data
-- 🔄 **JWT Token Implementation** - Enhanced login response with JWT tokens
 
 ### 4️⃣ Documentation
 - 🔄 **Task Checklist Update** - Current file being updated with commit hashes
@@ -48,7 +49,6 @@
 ### 1️⃣ Backend Completion
 - ❌ **UserController.java** - Separate controller for user-related endpoints
 - ❌ **JWT Authentication Filter** - Proper JWT validation middleware
-- ❌ **Enhanced Login Response** - Return user data and token on successful login
 
 ### 2️⃣ Frontend Enhancements
 - ❌ **Profile Display** - Show user information in Dashboard
@@ -74,11 +74,11 @@
 
 ## 📊 PROGRESS SUMMARY
 
-**Overall Completion: ~75%**
+**Overall Completion: ~80%**
 
 | Component | Status | Completion |
 |-----------|--------|------------|
-| Backend Core | ✅ Done | 85% |
+| Backend Core | ✅ Done | 90% |
 | Frontend Core | ✅ Done | 90% |
 | Documentation | ❌ Todo | 10% |
 | Testing | ❌ Todo | 0% |
@@ -89,8 +89,8 @@
 
 1. **Immediate (Session 1 Completion):**
    - Implement GET /api/user/me endpoint
-   - Add JWT token generation to login
-   - Update frontend to handle tokens
+   - Add JWT token validation middleware
+   - Update frontend to handle and validate tokens
    - Create documentation (ERD, UML, screenshots)
 
 2. **Short-term:**
@@ -105,6 +105,7 @@
 
 ---
 
-**Last Updated:** February 9, 2026
+**Last Updated:** February 22, 2026
 **Repository:** IT342_G2_Ycoy_Lab1
-**Current Branch:** main (fc8318a)
+**Current Branch:** main
+**Recent Changes:** Fixed JWT implementation with JJWT 0.12.6, updated dependencies
